@@ -69,17 +69,44 @@ h3 {
   text-align: center;
 }
 
-.layout-card {
+/* .layout-card {
   display: flex;
 }
 
 .col {
   border: 2px solid blue;
   flex: 1;
-}
+} */
 
+.grid {
+  display: grid;
+  grid-template-areas:
+    ". two ."
+    "one two four"
+    "one three four"
+    ". three .";
+  grid-auto-columns: 1fr;
+}
+.one {
+  grid-area: one;
+  border-top: 6px solid var(--clr-Cyan);
+}
+.two {
+  grid-area: two;
+  border-top: 6px solid var(--clr-Red);
+}
+.three {
+  grid-area: three;
+  border-top: 6px solid var(--clr-Orange);
+}
+.four {
+  grid-area: four;
+  border-top: 6px solid var(--clr-Blue);
+}
 /* styling individual card */
 .card {
+  margin: 2rem;
   padding: 2rem;
-  background-color: aqua;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
 }
